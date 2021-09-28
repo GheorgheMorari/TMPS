@@ -1,5 +1,6 @@
 #pragma once
 #include "neuron.h"
+#include "softmax.h"
 #include <list>
 struct Network {
 	vector<IObject*> output_vector;
@@ -35,7 +36,11 @@ struct Network {
 
 	vector<float> get_result() {
 		vector<float> ret;
-		for (auto object : output_vector) { ret.push_back(object->on_send().value); }
+		for (auto object : output_vector) {
+			auto value = object->on_send().value;
+			ret.push_back(value);
+			Softmax::GetInstance().add_component(value);
+		}
 		for (auto object : input_vector) { (object->on_send()); }
 		return ret;
 	}

@@ -21,6 +21,7 @@ public:
         for (auto component : components) {
             ret.push_back(component / common_denominator);
         }
+        reset();
         return ret;
     }
 

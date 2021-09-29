@@ -22,6 +22,7 @@ struct Network {
 			for (int i = 0; i < *it; i++) {
 				temporary_list.push_back(neuron_builder.build());
 			}
+			neuron_builder.reset_link();
 			neuron_builder.link = Link{ temporary_list };
 		}
 		input_vector = neuron_builder.link.obj_list;

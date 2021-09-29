@@ -24,4 +24,8 @@ struct Link :public IObject {
 			object->on_receive(data);
 		}
 	};
+
+	virtual IObject* clone() override{
+		return new Link(obj_list);
+	}
 };

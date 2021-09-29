@@ -9,7 +9,6 @@ struct Neuron :public IObject {
 	float bias;
 	float result;
 	Link link;
-	// Inherited via IObject
 
 	Neuron() {
 		weight = RANDF;
@@ -37,6 +36,10 @@ struct Neuron :public IObject {
 		result += data.value * weight + bias;
 		link.on_receive({(result)});
 	};
+
+	virtual IObject* clone() override{
+		return new Neuron(weight, bias, link);
+	}
 };
 
 

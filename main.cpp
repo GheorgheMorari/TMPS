@@ -47,7 +47,7 @@ int main() {
 	//manual_creation();
 
 	Network n = Network({ 3,3,3,4 });
-	vector<float> input_vector = { 0.0,-0.1,-1.2 };
+	vector<float> input_vector = { 0.01,-0.1,-1.2 };
 	printf("Automatic network creation:\n");
 	printf("Input neurons:\n");
 	for (auto input : input_vector) {

@@ -35,6 +35,10 @@ struct Network {
 		}
 	}
 
+	void add_input_neuron() {
+		input_vector.push_back(input_vector.front()->clone());
+	}
+
 	vector<float> get_result() {
 		vector<float> ret;
 		for (auto object : output_vector) {

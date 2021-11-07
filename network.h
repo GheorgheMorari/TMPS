@@ -1,6 +1,6 @@
 #pragma once
 #include "neuron.h"
-#include "softmax.h"
+#include "softmax_singleton.h"
 #include <list>
 struct Network {
 	vector<IObject*> output_vector;

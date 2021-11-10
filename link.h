@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "object.h"
+#include "iobject.h"
 using namespace std;
 
 struct Link :public IObject {

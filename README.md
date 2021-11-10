@@ -6,10 +6,14 @@ Artificial intelligence and neural networks.
 
 #LAB2:
 # Decorator:
-DNetwork (decorator network), used for the added functionality of printing the neural network's layers without influencing the base class.
+dnetwork.h DNetwork class(decorator network), used for the added functionality of printing the neural network's layers without influencing the base class.
 
 *INSERT IMAGE HERE*
 
+#Facade:
+fsoftmax.h softmax_layer function (facade for softmax), used for simplifying the softmax interface.
+
+*INSERT IMAGE HERE*
 
 #LAB1:
 # To instantiate a neuron, we can use:

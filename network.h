@@ -1,7 +1,6 @@
 #pragma once
 
 #include "neuron.h"
-#include "softmax_singleton.h"
 #include <list>
 #include "neuron_builder.h"
 
@@ -41,6 +40,7 @@ struct Network {
 
 	void add_input_neuron() {
 		input_vector.push_back(input_vector.front()->clone());
+		input_size++;
 	}
 
 	vector<float> get_result() {
@@ -48,7 +48,6 @@ struct Network {
 		for (auto object: output_vector) {
 			auto value = object->on_send().value;
 			ret.push_back(value);
-			Softmax::GetInstance().add_component(value);
 		}
 		for (auto object: input_vector) { (object->on_send()); }
 		return ret;

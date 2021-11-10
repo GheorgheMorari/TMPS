@@ -5,9 +5,7 @@
 #ifndef TMPS_DNETWORK_H
 #define TMPS_DNETWORK_H
 
-
 #include "network.h"
-
 #include <utility>
 
 struct DNetwork : public Network {
@@ -16,7 +14,7 @@ struct DNetwork : public Network {
 	void print_all_layers() {
 		auto layer = &input_vector;
 		for (int i = 0; true; ++i) {
-			printf("Layer %d: ",i);
+			printf("Layer %d: ", i);
 			print_layer(*layer);
 
 			auto first_neuron = (Neuron *) layer->front();

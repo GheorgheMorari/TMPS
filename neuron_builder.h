@@ -2,10 +2,11 @@
 // Created by gmora on 10.11.2021.
 //
 
-#ifndef TMPS_NEURONBUILDER_H
-#define TMPS_NEURONBUILDER_H
+#ifndef TMPS_NEURON_BUILDER_H
+#define TMPS_NEURON_BUILDER_H
 
 #include "ibuilder.h"
+#include "link.h"
 
 struct NeuronBuilder : public IBuilder {
 
@@ -29,4 +30,4 @@ struct NeuronBuilder : public IBuilder {
 	};
 };
 
-#endif //TMPS_NEURONBUILDER_H
+#endif //TMPS_NEURON_BUILDER_H

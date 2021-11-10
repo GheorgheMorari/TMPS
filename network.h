@@ -2,6 +2,7 @@
 #include "neuron.h"
 #include "softmax_singleton.h"
 #include <list>
+#include "neuron_builder.h"
 struct Network {
 	vector<IObject*> output_vector;
 	vector<IObject*> input_vector;

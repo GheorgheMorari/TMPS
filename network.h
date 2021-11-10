@@ -11,7 +11,7 @@ struct Network {
 	int input_size;
 	int output_size;
 
-	Network(list<int> network_size) {
+	Network(const list<int> &network_size) {
 		NeuronBuilder neuron_builder;
 
 		for (int i = 0; i < network_size.back(); i++) {
@@ -20,9 +20,10 @@ struct Network {
 		output_vector = neuron_builder.link.obj_list;
 		output_size = output_vector.size();
 
-		for (auto it = network_size.rbegin(); it != network_size.rend(); it++) {
+		for (auto it = next(network_size.rbegin()); it != network_size.rend(); it++) {
 			vector<IObject *> temporary_list;
-			for (int i = 0; i < *it; i++) {
+			auto layer_size = *it;
+			for (int i = 0; i < layer_size; i++) {
 				temporary_list.push_back(neuron_builder.build());
 			}
 			neuron_builder.reset_link();

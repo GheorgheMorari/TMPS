@@ -4,4 +4,4 @@ project(TMPS)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(TMPS
-        main.cpp builder.h data.h network.h object.h softmax_singleton.h)
+        main.cpp ibuilder.h data.h network.h iobject.h softmax_singleton.h dnetwork.h neuron_builder.h)

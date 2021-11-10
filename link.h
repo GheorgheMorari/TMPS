@@ -1,5 +1,6 @@
 #pragma once
 
+#include <utility>
 #include <vector>
 #include "iobject.h"
 
@@ -12,7 +13,7 @@ struct Link : public IObject {
 	Link() {}
 
 	Link(vector<IObject *> obj_list) {
-		this->obj_list = obj_list;
+		this->obj_list = std::move(obj_list);
 	}
 
 	virtual Data on_send() override {

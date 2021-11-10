@@ -1,24 +1,17 @@
-# TMPS lab 1 
 # Author: Morari Gheorghe
 # Topic:
-Practical use of creational design patterns.
+Practical use of behavioral design patterns.
 # Domain:
 Artificial intelligence and neural networks.
 
-# Main classes:
+#LAB2:
+# Decorator:
+DNetwork (decorator network), used for the added functionality of printing the neural network's layers without influencing the base class.
 
-1. Neuron
-2. Link
-3. Softmax
-
-# Theory:
-1.The builder design pattern can greatly help the creation of a neural network by building the layers, one at a time, while using the same connections to the next layer, in an one to all configuration of connections.
-
-2.The prototype design pattern can help the creation of copies  of the neurons and links, by providing a common virtual method, for the interface IObject.
-
-3.The singleton design pattern, can help with the use of softmax where only one instance is counting the parameters needed for a softmax calculation, which can be called everywhere and can be used for any softmax needs.
+*INSERT IMAGE HERE*
 
 
+#LAB1:
 # To instantiate a neuron, we can use:
 
 1. NeuronBuilder - Builder pattern.

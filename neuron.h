@@ -1,5 +1,4 @@
 #pragma once
-#define RANDF ((float) rand()) / (float) RAND_MAX
 
 #include <random>
 #include "iobject.h"
@@ -12,8 +11,10 @@ struct Neuron : public IObject {
 	Link link;
 
 	Neuron() {
-		weight = RANDF;
-		bias = 0;
+		static std::default_random_engine e;
+		static std::uniform_real_distribution<> dis(0, 1);
+		weight = dis(e);
+		bias = dis(e) - 0.5f;
 		result = 0;
 	}
 

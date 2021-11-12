@@ -4,21 +4,36 @@ Practical use of behavioral design patterns.
 # Domain:
 Artificial intelligence and neural networks.
 
-#LAB2:
+# LAB2:
 # Decorator:
-dnetwork.h DNetwork class(decorator network), used for the added functionality of printing the neural network's layers without influencing the base class.
+dnetwork.h DNetwork class(decorator network), used for the added functionality of printing the neural network's layers without modifying the base class.
 
-*INSERT IMAGE HERE*
+![image](https://user-images.githubusercontent.com/53918731/141479912-a15ee844-9ba7-467d-8cab-449c4b60cf3e.png)
 
-#Facade:
+Usage: (Network does not have a print_all_layers() function)
+
+![image](https://user-images.githubusercontent.com/53918731/141479984-55470081-0084-4a6d-9551-80f5800708ee.png)
+
+# Facade:
 fsoftmax.h softmax_layer function (facade for softmax), used for simplifying the softmax interface.
 
-*INSERT IMAGE HERE*
+![image](https://user-images.githubusercontent.com/53918731/141480489-f294bd90-e88c-4b44-915a-bbaebc8fe677.png)
 
-#Composite:
+Usage: Adds the ability to call the softmax singleton to easily apply the softmax transformation for an array of numbers.
+
+![image](https://user-images.githubusercontent.com/53918731/141480567-5a2213d3-32e2-438f-82bb-bbe49235d2d7.png)
+
+# Composite:
 link.h Link class, used as a composite for neurons, by calling all children' on_send(), or on_receive() functions.
 
-#LAB1:
+![image](https://user-images.githubusercontent.com/53918731/141480872-3994f3bc-e5e6-492b-9a47-b38cf146a569.png)
+
+Usage: Call the same function with the same arguments for multiple neurons in a layer using a link.
+
+![image](https://user-images.githubusercontent.com/53918731/141481122-e00b714f-89e4-446c-9b1b-1c2cd34933f7.png)
+
+
+# LAB1:
 # To instantiate a neuron, we can use:
 
 1. NeuronBuilder - Builder pattern.

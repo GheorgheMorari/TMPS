@@ -15,6 +15,9 @@ fsoftmax.h softmax_layer function (facade for softmax), used for simplifying the
 
 *INSERT IMAGE HERE*
 
+#Composite:
+link.h Link class, used as a composite for neurons, by calling all children' on_send(), or on_receive() functions.
+
 #LAB1:
 # To instantiate a neuron, we can use:
 

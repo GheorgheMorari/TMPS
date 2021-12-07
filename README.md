@@ -7,8 +7,12 @@ Artificial intelligence and neural networks.
 # LAB3:
 # Iterator
 layer_iterator.h LayerIterator class, used for the functionality of traversing the neural network layers without exposing its structure.
+![image](https://user-images.githubusercontent.com/53918731/145062058-e08d04b8-0173-4a67-a1f9-d864acddf195.png)
 
-TODO paste image here 
+Because i used the C++ language, which already has syntax for iterators, i just wrote the LayerIterator as a custom iterator for the Network class, which means that i can use C++ iterator specific syntax:
+![image](https://user-images.githubusercontent.com/53918731/145062102-fc2e6855-280c-4fd7-850a-4e26c5dcabbf.png)
+
+
 # LAB2:
 # Decorator:
 dnetwork.h DNetwork class(decorator network), used for the added functionality of printing the neural network's layers without modifying the base class.

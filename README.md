@@ -4,6 +4,11 @@ Practical use of behavioral design patterns.
 # Domain:
 Artificial intelligence and neural networks.
 
+# LAB3:
+# Iterator
+layer_iterator.h LayerIterator class, used for the functionality of traversing the neural network layers without exposing its structure.
+
+TODO paste image here 
 # LAB2:
 # Decorator:
 dnetwork.h DNetwork class(decorator network), used for the added functionality of printing the neural network's layers without modifying the base class.
